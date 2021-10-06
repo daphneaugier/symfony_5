@@ -20,7 +20,7 @@ final class Version20211006014323 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('CREATE TABLE comment (id INT AUTO_INCREMENT NOT NULL, posts_id INT DEFAULT NULL, commentÂ_text LONGTEXT NOT NULL, INDEX IDX_9474526CD5E258C5 (posts_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE comment (id INT AUTO_INCREMENT NOT NULL, posts_id INT DEFAULT NULL, comment_text LONGTEXT NOT NULL, INDEX IDX_9474526CD5E258C5 (posts_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('ALTER TABLE comment ADD CONSTRAINT FK_9474526CD5E258C5 FOREIGN KEY (posts_id) REFERENCES posts (id)');
         $this->addSql('ALTER TABLE posts CHANGE user_id user_id INT DEFAULT NULL');
     }

@@ -20,7 +20,7 @@ final class Version20211006023348 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE comment CHANGE comment?_text comment_text LONGTEXT NOT NULL');
+        $this->addSql('ALTER TABLE comment CHANGE comment_text comment_text LONGTEXT NOT NULL');
         $this->addSql('ALTER TABLE posts CHANGE updated_at updated_at DATETIME DEFAULT NULL');
     }
 

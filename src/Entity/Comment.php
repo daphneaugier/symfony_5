@@ -20,7 +20,7 @@ class Comment
     /**
      * @ORM\Column(type="text")
      */
-    private $commentÂ_text;
+    private $comment_text;
 
     /**
      * @ORM\ManyToOne(targetEntity=Posts::class, inversedBy="comments")
@@ -32,14 +32,14 @@ class Comment
         return $this->id;
     }
 
-    public function getCommentÂText(): ?string
+    public function getCommentText(): ?string
     {
-        return $this->commentÂ_text;
+        return $this->comment_text;
     }
 
-    public function setCommentÂText(string $commentÂ_text): self
+    public function setCommentText(string $comment_text): self
     {
-        $this->commentÂ_text = $commentÂ_text;
+        $this->comment_text = $comment_text;
 
         return $this;
     }
