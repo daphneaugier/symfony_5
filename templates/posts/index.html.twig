@@ -3,18 +3,263 @@
 {% block title %}Hello PostsController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center my-5">
+                        <h1 class="display-5 fw-bolder text-white mb-2">Present your creative work in a whole new way</h1>
+                        <p class="lead text-white-50 mb-4">Write and share all sort of artwork you create with SymfonyNews!</p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                            <a class="btn btn-light btn-lg px-4 me-sm-3" href="#features">Join the team</a>
+                            <a class="btn btn-outline-light btn-lg px-4" href="#!">Log in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Features section-->
+    <div class="bg-light py-5 text-center mb-5">
+        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+        <h2 class="fw-bolder">Artworks</h2>
+        <p class="lead mb-0">Check all of our artists' posts, and feel free to leave a thumbsup or a comment!</p>
+    </div>
+    <div class="py-5 bg-light border-bottom row row-cols-1 row-cols-md-3 g-5">
+        <div class="col">
+            <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <small class="text-muted">Shared by Author on createdAt</small>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <div class="small d-flex justify-content-start">
+                        <a href="#!" class="d-flex align-items-center me-3">
+                            <i class="far fa-thumbs-up me-2"></i>
+                            <p class="mb-0">Like</p>
+                        </a>
+                        <a href="#!" class="d-flex align-items-center me-3">
+                            <i class="far fa-comment-dots me-2"></i>
+                            <p class="mb-0">Comment</p>
+                        </a>
+                    </div>
+                    <textarea class="form-control ml-1 shadow-none textarea"></textarea>
+                    <div class="float-end mt-2 pt-1">
+                        <button type="button" class="btn btn-dark btn-sm">Post comment</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <small class="text-muted">Shared by Author on createdAt</small>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <div class="small d-flex justify-content-start">
+                        <a href="#!" class="d-flex align-items-center me-3">
+                            <i class="far fa-thumbs-up me-2"></i>
+                            <p class="mb-0">Like</p>
+                        </a>
+                        <a href="#!" class="d-flex align-items-center me-3">
+                            <i class="far fa-comment-dots me-2"></i>
+                            <p class="mb-0">Comment</p>
+                        </a>
+                    </div>
+                    <textarea class="form-control ml-1 shadow-none textarea"></textarea>
+                    <div class="float-end mt-2 pt-1">
+                        <button type="button" class="btn btn-dark btn-sm">Post comment</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <small class="text-muted">Shared by Author on createdAt</small>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <div class="small d-flex justify-content-start">
+                        <a href="#!" class="d-flex align-items-center me-3">
+                            <i class="far fa-thumbs-up me-2"></i>
+                            <p class="mb-0">Like</p>
+                        </a>
+                        <a href="#!" class="d-flex align-items-center me-3">
+                            <i class="far fa-comment-dots me-2"></i>
+                            <p class="mb-0">Comment</p>
+                        </a>
+                    </div>
+                    <textarea class="form-control ml-1 shadow-none textarea"></textarea>
+                    <div class="float-end mt-2 pt-1">
+                        <button type="button" class="btn btn-dark btn-sm">Post comment</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <small class="text-muted">Shared by Author on createdAt</small>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <div class="small d-flex justify-content-start">
+                        <a href="#!" class="d-flex align-items-center me-3">
+                            <i class="far fa-thumbs-up me-2"></i>
+                            <p class="mb-0">Like</p>
+                        </a>
+                        <a href="#!" class="d-flex align-items-center me-3">
+                            <i class="far fa-comment-dots me-2"></i>
+                            <p class="mb-0">Comment</p>
+                        </a>
+                    </div>
+                    <textarea class="form-control ml-1 shadow-none textarea"></textarea>
+                    <div class="float-end mt-2 pt-1">
+                        <button type="button" class="btn btn-dark btn-sm">Post comment</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <small class="text-muted">Shared by Author on createdAt</small>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <div class="small d-flex justify-content-start">
+                        <a href="#!" class="d-flex align-items-center me-3">
+                            <i class="far fa-thumbs-up me-2"></i>
+                            <p class="mb-0">Like</p>
+                        </a>
+                        <a href="#!" class="d-flex align-items-center me-3">
+                            <i class="far fa-comment-dots me-2"></i>
+                            <p class="mb-0">Comment</p>
+                        </a>
+                    </div>
+                    <textarea class="form-control ml-1 shadow-none textarea"></textarea>
+                    <div class="float-end mt-2 pt-1">
+                        <button type="button" class="btn btn-dark btn-sm">Post comment</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <small class="text-muted">Shared by Author on createdAt</small>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <div class="small d-flex justify-content-start">
+                        <a href="#!" class="d-flex align-items-center me-3">
+                            <i class="far fa-thumbs-up me-2"></i>
+                            <p class="mb-0">Like</p>
+                        </a>
+                        <a href="#!" class="d-flex align-items-center me-3">
+                            <i class="far fa-comment-dots me-2"></i>
+                            <p class="mb-0">Comment</p>
+                        </a>
+                    </div>
+                    <textarea class="form-control ml-1 shadow-none textarea"></textarea>
+                    <div class="float-end mt-2 pt-1">
+                        <button type="button" class="btn btn-dark btn-sm">Post comment</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+        </div>
+    </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/adrien/Sites/symfony_5/src/Controller/PostsController.php'|file_link(0) }}">src/Controller/PostsController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/adrien/Sites/symfony_5/templates/posts/index.html.twig'|file_link(0) }}">templates/posts/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <div class="bg-light d-grid gap-3 d-sm-flex justify-content-sm-center">
+        <a class="btn btn-dark btn-lg px-4 me-sm-3" href="#features">Submit artwork!</a>
+    </div>
+
+    <!-- Contact section-->
+    <section class="bg-light py-5">
+        <div class="container px-5 my-5 px-5">
+            <div class="text-center mb-5">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                <h2 class="fw-bolder">Get in touch</h2>
+                <p class="lead mb-0">We'd love to hear from you</p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <label for="name">Full name</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                            <label for="email">Email address</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                            <label for="phone">Phone number</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <label for="message">Message</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        </div>
+                        <!-- Submit success message-->
+                        <!---->
+                        <!-- This is what your users will see when the form-->
+                        <!-- has successfully submitted-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                To activate this form, sign up at
+                                <br />
+                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                        <!-- Submit Button-->
+                        <div class="d-grid"><button class="btn btn-dark btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}
