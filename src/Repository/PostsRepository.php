@@ -18,6 +18,16 @@ class PostsRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Posts::class);
     }
+    
+    public function findLastPosts(int $nb=6){
+        return $this->createQueryBuilder('n')
+                ->andWhere('n.status = :status')
+                ->setParameter('status', 'PUBLISHED')
+                ->orderBy('n.createdAt', 'DESC')
+                ->setMaxResults($nb)
+                ->getQuery()
+                ->getResult();
+    }
 
     // /**
     //  * @return Posts[] Returns an array of Posts objects

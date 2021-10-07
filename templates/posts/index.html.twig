@@ -21,20 +21,24 @@
             </div>
         </div>
     </header>
-    <!-- Features section-->
+    <!-- Posts section-->
     <div class="bg-light py-5 text-center mb-5">
         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+
         <h2 class="fw-bolder">Artworks</h2>
         <p class="lead mb-0">Check all of our artists' posts, and feel free to leave a thumbsup or a comment!</p>
     </div>
+
     <div class="py-5 bg-light border-bottom row row-cols-1 row-cols-md-3 g-5">
+
+        {% for posts in lastPosts %}
         <div class="col">
             <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="..." class="card-img-top" alt="image">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <small class="text-muted">Shared by Author on createdAt</small>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <h5 class="card-title">{{ posts.title|capitalize }}</h5>
+                    <small class="text-muted">Shared by {{ posts.user.firstName|capitalize }} {{ posts.user.lastName|capitalize }} {{ posts.createdAt| ago }}</small>
+                    <p class="card-text">{{ posts.content|capitalize }}</p>
                     <div class="small d-flex justify-content-start">
                         <a href="#!" class="d-flex align-items-center me-3">
                             <i class="far fa-thumbs-up me-2"></i>
@@ -55,141 +59,8 @@
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <small class="text-muted">Shared by Author on createdAt</small>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <div class="small d-flex justify-content-start">
-                        <a href="#!" class="d-flex align-items-center me-3">
-                            <i class="far fa-thumbs-up me-2"></i>
-                            <p class="mb-0">Like</p>
-                        </a>
-                        <a href="#!" class="d-flex align-items-center me-3">
-                            <i class="far fa-comment-dots me-2"></i>
-                            <p class="mb-0">Comment</p>
-                        </a>
-                    </div>
-                    <textarea class="form-control ml-1 shadow-none textarea"></textarea>
-                    <div class="float-end mt-2 pt-1">
-                        <button type="button" class="btn btn-dark btn-sm">Post comment</button>
-                        <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
-                    </div>
-                </div>
-                <div class="card-footer">
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <small class="text-muted">Shared by Author on createdAt</small>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <div class="small d-flex justify-content-start">
-                        <a href="#!" class="d-flex align-items-center me-3">
-                            <i class="far fa-thumbs-up me-2"></i>
-                            <p class="mb-0">Like</p>
-                        </a>
-                        <a href="#!" class="d-flex align-items-center me-3">
-                            <i class="far fa-comment-dots me-2"></i>
-                            <p class="mb-0">Comment</p>
-                        </a>
-                    </div>
-                    <textarea class="form-control ml-1 shadow-none textarea"></textarea>
-                    <div class="float-end mt-2 pt-1">
-                        <button type="button" class="btn btn-dark btn-sm">Post comment</button>
-                        <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
-                    </div>
-                </div>
-                <div class="card-footer">
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <small class="text-muted">Shared by Author on createdAt</small>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <div class="small d-flex justify-content-start">
-                        <a href="#!" class="d-flex align-items-center me-3">
-                            <i class="far fa-thumbs-up me-2"></i>
-                            <p class="mb-0">Like</p>
-                        </a>
-                        <a href="#!" class="d-flex align-items-center me-3">
-                            <i class="far fa-comment-dots me-2"></i>
-                            <p class="mb-0">Comment</p>
-                        </a>
-                    </div>
-                    <textarea class="form-control ml-1 shadow-none textarea"></textarea>
-                    <div class="float-end mt-2 pt-1">
-                        <button type="button" class="btn btn-dark btn-sm">Post comment</button>
-                        <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
-                    </div>
-                </div>
-                <div class="card-footer">
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <small class="text-muted">Shared by Author on createdAt</small>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <div class="small d-flex justify-content-start">
-                        <a href="#!" class="d-flex align-items-center me-3">
-                            <i class="far fa-thumbs-up me-2"></i>
-                            <p class="mb-0">Like</p>
-                        </a>
-                        <a href="#!" class="d-flex align-items-center me-3">
-                            <i class="far fa-comment-dots me-2"></i>
-                            <p class="mb-0">Comment</p>
-                        </a>
-                    </div>
-                    <textarea class="form-control ml-1 shadow-none textarea"></textarea>
-                    <div class="float-end mt-2 pt-1">
-                        <button type="button" class="btn btn-dark btn-sm">Post comment</button>
-                        <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
-                    </div>
-                </div>
-                <div class="card-footer">
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <small class="text-muted">Shared by Author on createdAt</small>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <div class="small d-flex justify-content-start">
-                        <a href="#!" class="d-flex align-items-center me-3">
-                            <i class="far fa-thumbs-up me-2"></i>
-                            <p class="mb-0">Like</p>
-                        </a>
-                        <a href="#!" class="d-flex align-items-center me-3">
-                            <i class="far fa-comment-dots me-2"></i>
-                            <p class="mb-0">Comment</p>
-                        </a>
-                    </div>
-                    <textarea class="form-control ml-1 shadow-none textarea"></textarea>
-                    <div class="float-end mt-2 pt-1">
-                        <button type="button" class="btn btn-dark btn-sm">Post comment</button>
-                        <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
-                    </div>
-                </div>
-                <div class="card-footer">
-                </div>
-            </div>
-        </div>
+        {% endfor %}
+
     </div>
 
     <div class="bg-light d-grid gap-3 d-sm-flex justify-content-sm-center">
