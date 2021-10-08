@@ -31,7 +31,9 @@ class AppFixtures extends Fixture
                 ->setFirstName($generator->firstName)
                 ->setLastName($generator->lastName)
                 ->setUsername($generator->userName)
-                ->setPassword($password);
+                ->setPassword($password)
+                ->setEmail($generator->email);
+
             $manager->persist($user);
 
             for($j = 0 ; $j < rand(10,15); $j++) {
