@@ -13,8 +13,8 @@
                         <h1 class="display-5 fw-bolder text-white mb-2">Present your creative work in a whole new way</h1>
                         <p class="lead text-white-50 mb-4">Write and share all sort of artwork you create with SymfonyNews!</p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                            <a class="btn btn-light btn-lg px-4 me-sm-3" href="#features">Join the team</a>
-                            <a class="btn btn-outline-light btn-lg px-4" href="#!">Log in</a>
+                            <a class="btn btn-light btn-lg px-4 me-sm-3" href="/signup">Join the team</a>
+                            <a class="btn btn-outline-light btn-lg px-4" href="/login">Log in</a>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ posts.title|capitalize }}</h5>
                     <small class="text-muted">Shared by {{ posts.user.firstName|capitalize }} {{ posts.user.lastName|capitalize }} {{ posts.createdAt| ago }}</small>
-                    <p class="card-text">{{ posts.content|capitalize| u.trugncate(20, '...') }}</p>
+                    <p class="card-text">{{ posts.content|capitalize| u.truncate(20, '...') }}</p>
                     <div class="small d-flex justify-content-start">
                         <a href="#!" class="d-flex align-items-center me-3">
                             <i class="far fa-thumbs-up me-2"></i>
@@ -49,7 +49,7 @@
                             <p class="mb-0">Comment</p>
                         </a>
                     </div>
-                    <textarea class="form-control ml-1 shadow-none textarea"></textarea>
+                    <textarea style="display:none" class="form-control ml-1 shadow-none textarea"></textarea>
                     <div class="float-end mt-2 pt-1">
                         <button type="button" class="btn btn-dark btn-sm">Post comment</button>
                         <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
@@ -64,7 +64,7 @@
     </div>
 
     <div class="bg-light d-grid gap-3 d-sm-flex justify-content-sm-center">
-        <a class="btn btn-dark btn-lg px-4 me-sm-3" href="#features">Submit artwork!</a>
+        <a class="btn btn-dark btn-lg px-4 me-sm-3" href="/submit-art">Submit artwork!</a>
     </div>
 
     <!-- Contact section-->
