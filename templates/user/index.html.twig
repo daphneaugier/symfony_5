@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artists{% endblock %}
+
+{% block body %}
+    <main role="main">
+
+    <div class="py-5 bg-light border-bottom row row-cols-1 row-cols-md-3 g-5">
+        <div class="container"></div>
+    </div>
+
+        <div class="container">
+            <table class="table table-hovered">
+                <thead>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>E-mail address</th>
+                    <th>Number of posts</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.firstName }}</td>
+                    <td>{{ user.lastName }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.posts | length }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+{% endblock %}
