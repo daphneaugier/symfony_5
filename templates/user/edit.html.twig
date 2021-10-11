@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artists{% endblock %}
+
+{% block body %}
+    <main role="main">
+
+    <div class="py-5 bg-light border-bottom row row-cols-1 row-cols-md-3 g-5">
+        <div class="container"></div>
+    </div>
+
+        <div class="container">
+            {{ form_start(form) }}
+            {{ form_row(form.firstName) }}
+            {{ form_row(form.lastName) }}
+            {{ form_end(form) }}
+        </div>
+    </main>
+{% endblock %}
