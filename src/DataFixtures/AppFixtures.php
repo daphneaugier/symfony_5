@@ -38,9 +38,15 @@ class AppFixtures extends Fixture
 
             for($j = 0 ; $j < rand(10,15); $j++) {
                 $posts = new Posts();
+
+                $content = "";
+
+                for($s = 0 ; $s < rand(15,25); $s++){
+                    $content .= $generator->word." ";
+                }
                 $posts
                     ->setTitle($generator->word)
-                    ->setContent($generator->word)
+                    ->setContent($content)
                     ->setStatus(
                         $generator->randomElement(['DRAFT' , 'PUBLISHED' , 'DELETED'])
                     )
