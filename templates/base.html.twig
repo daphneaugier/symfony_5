@@ -46,13 +46,18 @@
                         ? 'disabled' }}" href="/artists">Artists</a>
                     </li>
 
-                    <li class="nav-item">
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                        <a class="nav-link" href="{{ path('app_logout') }}">Log out</a>
-                        {% else %}
-                        <a class="nav-link" href="{{ path('app_login') }}">Log in</a>
-                        {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/artists/{{ app.user.id }}">Profile</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_logout') }}">Log out</a>
+                    </li>
+                        {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_login') }}">Log in</a>
+                    </li>
+                        {% endif %}
                 </ul>
             </div>
         </div>
