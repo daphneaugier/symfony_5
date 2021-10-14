@@ -1,0 +1,29 @@
+ <!-- Posts section-->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/{{ posts.image }}" class="card-img-top" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ posts.title|capitalize }}</h5>
+                        <small class="text-muted">Shared by {{ posts.user.firstName|capitalize }} {{ posts.user.lastName|capitalize }} {{ posts.createdAt| ago }}</small>
+                        <p class="card-text">{{ posts.content|capitalize}}</p>
+                        <div class="small d-flex justify-content-start">
+                            <a href="#!" class="d-flex align-items-center me-3">
+                                <i class="far fa-thumbs-up me-2"></i>
+                                <p class="mb-0">Like</p>
+                            </a>
+                            <a href="#!" class="d-flex align-items-center me-3">
+                                <i class="far fa-comment-dots me-2"></i>
+                                <p class="mb-0">Comment</p>
+                            </a>
+                        </div>
+                        <textarea style="display:none" class="form-control ml-1 shadow-none textarea"></textarea>
+                        <div class="float-end mt-2 pt-1">
+                            <button type="button" class="btn btn-dark btn-sm">Post comment</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+
