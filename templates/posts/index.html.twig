@@ -13,8 +13,10 @@
                         <h1 class="display-5 fw-bolder text-white mb-2">Present your creative work in a whole new way</h1>
                         <p class="lead text-white-50 mb-4">Write and share all sort of artwork you create with SymfonyNews!</p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                            {% if is_granted('IS_AUTHENTICATED_FULLY') == false %}
                             <a class="btn btn-light btn-lg px-4 me-sm-3" href="/register">Join the team</a>
                             <a class="btn btn-outline-light btn-lg px-4" href="/login">Log in</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
