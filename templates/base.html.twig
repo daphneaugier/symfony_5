@@ -30,25 +30,46 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+
+                        <a class="nav-link
+                            {% if app.request.get('_route') == 'posts' %}
+                             active
+                             {% endif %}
+                        " href="/">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link
+                            {% if app.request.get('_route') == 'about' %}
+                             active
+                             {% endif %}
+                        " href="/about">About</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/artworks">Artworks</a>
+                        <a class="nav-link
+                            {% if app.request.get('_route') == 'artworks' %}
+                             active
+                             {% endif %}
+                        " href="/artworks">Artworks</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {{ is_granted('IS_AUTHENTICATED_FULLY') == false
+                        <a class="nav-link
+                            {% if app.request.get('_route') == 'users' %}
+                             active
+                             {% endif %}
+                        {{ is_granted('IS_AUTHENTICATED_FULLY') == false
                         ? 'disabled' }}" href="/artists">Artists</a>
                     </li>
 
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     <li class="nav-item">
-                        <a class="nav-link" href="/artists/{{ app.user.id }}">Profile</a>
+                        <a class="nav-link
+                            {% if app.request.get('_route') == 'edit' %}
+                             active
+                             {% endif %}
+                           " href="/artists/{{ app.user.id }}">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('app_logout') }}">Log out</a>
