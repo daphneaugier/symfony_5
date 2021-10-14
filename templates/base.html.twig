@@ -42,7 +42,8 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/artists">Artists</a>
+                        <a class="nav-link {{ is_granted('IS_AUTHENTICATED_FULLY') == false
+                        ? 'disabled' }}" href="/artists">Artists</a>
                     </li>
 
                     <li class="nav-item">
