@@ -29,6 +29,15 @@ class PostsRepository extends ServiceEntityRepository
                 ->getResult();
     }
 
+    public function findPublishedPosts(){
+        return $this->createQueryBuilder('n')
+            ->andWhere('n.status = :status')
+            ->setParameter('status', 'PUBLISHED')
+            ->orderBy('n.createdAt', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Posts[] Returns an array of Posts objects
     //  */
