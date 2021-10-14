@@ -51,7 +51,8 @@ class AppFixtures extends Fixture
                         $generator->randomElement(['DRAFT' , 'PUBLISHED' , 'DELETED'])
                     )
                     ->setCreatedAt($generator->dateTimeBetween('-1 year', 'now'))
-                    ->setUser($user);
+                    ->setUser($user)
+                    ->setImage("img-".rand(1,31).".jpg");
                 $manager->persist($posts);
 
                 for($k = 0 ; $k < rand(1,5); $k++) {
