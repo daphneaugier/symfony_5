@@ -1,58 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}SymfonyNew{% endblock %}
-
-{% block body %}
-
-    <!-- Post section-->
-    <div class="py-3 bg-light border-bottom">
-        <div class="col px-5">
-            <div class="card h-100 d-flex justify-content-center">
-                <img src="../images/{{ posts.image }}" class="center" alt="image" style="width: 300px">
-                <div class="card-body">
-                    <h5 class="card-title">{{ posts.title|capitalize }}</h5>
-                    <small class="text-muted">Shared by {{ posts.user.firstName|capitalize }} {{ posts.user.lastName|capitalize }} {{ posts.createdAt| ago }}</small>
-                    <p class="card-text">{{ posts.content|capitalize }}</p>
-
-                    <hr>
-                    <h6><i class="pr-3 fa fa-comment"></i>{{ posts.comments|length }} Comments</h6>
-                    {% for comment in posts.comments %}
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="comment-container d-inline-block pl-3 align-top">
-                                    <p>
-                                        <span class="comment"> {{ comment.commentText|capitalize }}</span>
-                                        <br>
-                                        <small class="text-muted commenter-name">{{ comment.authorName|capitalize}}</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                    {% if app.user %}
-                        <form method="post" action="">
-                            <textarea class="form-control ml-1 shadow-none textarea comment-form" id="comment_text"></textarea>
-                            <small class="commenter-name">{{ app.user.firstName|capitalize }} {{ app.user.lastName|capitalize }}</small>
-                            <div class="float-end mt-2 pt-1">
-                                <button type="submit" class="btn btn-dark btn-sm">Comment</button>
-                            </div>
-                            <input type="hidden" name="post_id" value="{{ posts.id }}">
-                            <input type="hidden" name="user" value="{{ app.user.id }}">
-
-                        </form>
-                        <h2>Avec form</h2>
-                        {{ form(form) }}
-
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-{% endblock %}{% extends 'base.html.twig' %}
-
-{% block title %}Post{% endblock %}
+{% block title %}SymfonyNews{% endblock %}
 
 {% block body %}
 
@@ -93,9 +41,6 @@
                             <input type="hidden" name="user" value="{{ app.user.id }}">
 
                         </form>
-                        <h2>Avec form</h2>
-                        {{ form(form) }}
-
                     {% endif %}
                 </div>
             </div>

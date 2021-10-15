@@ -35,8 +35,6 @@ class PostsController  extends AbstractController
      */
     public function read(Posts $Posts): Response
     {
-        //$comments = $commentRepository->findBy(['Posts' => $Posts]);
-
         return $this->render('posts/read.html.twig', [
             'posts' => $Posts,
           //  'comments' => $comments,
