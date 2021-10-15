@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block stylesheets %}
+    <style type="text/css">
+        .form_register
+        {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: 150px
+            auto;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<form method="post" class="form_register">
+    <h1 class="display-10 fw-bolder text-black mb-4" style="text-align: center">Register</h1>
+        {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.username) }}
+        {{ form_row(registrationForm.firstName) }}
+        {{ form_row(registrationForm.lastName) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+        {{ form_end(registrationForm) }}
+</form>
+{% endblock %}
