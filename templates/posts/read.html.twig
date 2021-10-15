@@ -31,16 +31,7 @@
                         </div>
                     {% endfor %}
                     {% if app.user %}
-                        <form method="post" action="">
-                            <textarea class="form-control ml-1 shadow-none textarea comment-form" id="comment_text"></textarea>
-                            <small class="commenter-name">{{ app.user.firstName|capitalize }} {{ app.user.lastName|capitalize }}</small>
-                            <div class="float-end mt-2 pt-1">
-                                <button type="submit" class="btn btn-dark btn-sm">Comment</button>
-                            </div>
-                            <input type="hidden" name="post_id" value="{{ posts.id }}">
-                            <input type="hidden" name="user" value="{{ app.user.id }}">
-
-                        </form>
+                        {{ form(form) }}
                     {% endif %}
                 </div>
             </div>
