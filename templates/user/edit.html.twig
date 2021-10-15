@@ -2,13 +2,22 @@
 
 {% block title %}Artists{% endblock %}
 
+{% block stylesheets %}
+    <style type="text/css">
+        .form_edit
+        {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: 150px
+            auto;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
+<form method="post" class="form_edit">
     <main role="main">
-
-    <div class="py-5 bg-light border-bottom row row-cols-1 row-cols-md-3 g-5">
-        <div class="container"></div>
-    </div>
-
         <div class="container">
             {{ form_start(form) }}
             {{ form_row(form.firstName) }}
@@ -16,4 +25,5 @@
             {{ form_end(form) }}
         </div>
     </main>
+</form>
 {% endblock %}
