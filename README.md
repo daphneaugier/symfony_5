@@ -1,7 +1,7 @@
 # SymfonyNews
 
-## Objective �
-The goal of this project to build a small web application to get to play around with some features of Symfony 5 and Twig
+## Objective
+The goal of this project to build a small web application to get to play around with some features of Symfony 5 and Twig.
 
 
 ## Technologies used
