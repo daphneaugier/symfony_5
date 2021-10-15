@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SymfonyNews{% endblock %}
+
+{% block stylesheets %}
+    <style type="text/css">
+        .form_submit
+        {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: 150px
+            auto;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <form method="post" class="form_submit">
+        <main role="main">
+            <div class="container">
+                {{ form(form) }}
+            </div>
+        </main>
+    </form>
+{% endblock %}
