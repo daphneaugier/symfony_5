@@ -5,11 +5,13 @@ namespace App\Entity;
 use App\Repository\CommentRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * @ORM\Entity(repositoryClass=CommentRepository::class)
  */
 class Comment
 {
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -24,8 +26,14 @@ class Comment
 
     /**
      * @ORM\ManyToOne(targetEntity=Posts::class, inversedBy="comments")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $Posts;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $authorName;
 
     public function getId(): ?int
     {
@@ -52,6 +60,18 @@ class Comment
     public function setPosts(?Posts $Posts): self
     {
         $this->Posts = $Posts;
+
+        return $this;
+    }
+
+    public function getAuthorName(): ?string
+    {
+        return $this->authorName;
+    }
+
+    public function setAuthorName(string $authorName): self
+    {
+        $this->authorName = $authorName;
 
         return $this;
     }

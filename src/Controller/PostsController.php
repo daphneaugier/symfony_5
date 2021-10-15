@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\CommentRepository;
 use App\Entity\Posts;
 use App\Repository\PostsRepository;
 use Doctrine\ORM\Mapping\Driver\RepeatableAttributeCollection;
@@ -32,10 +33,13 @@ class PostsController  extends AbstractController
      *
      * @return void
      */
-    public function read(Posts $posts): Response
+    public function read(Posts $Posts): Response
     {
+        //$comments = $commentRepository->findBy(['Posts' => $Posts]);
+
         return $this->render('posts/read.html.twig', [
-            'posts' => $posts,
+            'posts' => $Posts,
+          //  'comments' => $comments,
         ]);
     }
 

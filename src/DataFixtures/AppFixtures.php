@@ -57,10 +57,14 @@ class AppFixtures extends Fixture
 
                 for($k = 0 ; $k < rand(1,5); $k++) {
                     $comment = new Comment();
+
                     $comment
                         ->setCommentText($generator->word)
-                        ->setPosts($posts);
+                        ->setPosts($posts)
+                        ->setAuthorName($generator->firstName);
                     $manager->persist($comment);
+
+
                 }
             }
         }

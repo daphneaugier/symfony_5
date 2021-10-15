@@ -7,32 +7,36 @@
     <!-- Post section-->
 
     <div class="py-3 bg-light border-bottom">
-        <div class="col">
+        <div class="col px-5">
             <div class="card h-100 d-flex justify-content-center">
-                <img src="..." class="card-img-top" alt="image">
+                <img src="../images/{{ posts.image }}" class="center" alt="image" style="width: 300px">
                 <div class="card-body">
                     <h5 class="card-title">{{ posts.title|capitalize }}</h5>
                     <small class="text-muted">Shared by {{ posts.user.firstName|capitalize }} {{ posts.user.lastName|capitalize }} {{ posts.createdAt| ago }}</small>
                     <p class="card-text">{{ posts.content|capitalize }}</p>
-                    <div class="small d-flex justify-content-start">
-                        <a href="#!" class="d-flex align-items-center me-3">
-                            <i class="far fa-thumbs-up me-2"></i>
-                            <p class="mb-0">Like</p>
-                        </a>
-                        <a href="#!" class="d-flex align-items-center me-3">
-                            <i class="far fa-comment-dots me-2"></i>
-                            <p class="mb-0">Comment</p>
-                        </a>
-                    </div>
-                    <textarea style="display:none" class="form-control ml-1 shadow-none textarea"></textarea>
-                    <div class="float-end mt-2 pt-1">
-                        <button type="button" class="btn btn-dark btn-sm">Post comment</button>
-                        <button type="button" class="btn btn-outline-dark btn-sm">Cancel</button>
-                    </div>
+
+                    <hr>
+                    <h6><i class="pr-3 fa fa-comment"></i>{{ posts.comments|length }} Comments</h6>
+                            {% for comment in posts.comments %}
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="comment-container d-inline-block pl-3 align-top">
+                                            <p>
+                                            <span class="comment"> {{ comment.commentText|capitalize }}</span>
+                                            <br>
+                                            <small class="text-muted commenter-name">{{ comment.authorName|capitalize}}</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            <textarea class="form-control ml-1 shadow-none textarea comment-form" id="comment_text"></textarea>
+                                <small class="commenter-name">{{ posts.user.firstName|capitalize }} {{ posts.user.lastName|capitalize }}</small>
+                                <div class="float-end mt-2 pt-1">
+                                    <button type="button" class="btn btn-dark btn-sm">Post comment</button>
+                                </div>
+                            </div>
                 </div>
-                <div class="card-footer">
-                </div>
-            </div>
         </div>
     </div>
 
