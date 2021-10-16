@@ -30,7 +30,7 @@ class ArtworksController extends AbstractController
     public function add(Request $request): Response
     {
         if($this->getUser() == null){
-            return $this->redirectToRoute('posts');
+            return $this->redirectToRoute('app_login');
         }else{
             $new_post = new Posts();
             $new_post->setUser($this->getUser());
