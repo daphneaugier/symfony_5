@@ -28,8 +28,7 @@ class ArtworkType extends AbstractType
                     new File([
                         'maxSize' => '2048k',
                         'mimeTypes' => [
-                            'image/jpeg',
-                            'image/png',
+                            'image/*',
                         ],
                         'mimeTypesMessage' => 'Please upload a valid image document file',
                     ])

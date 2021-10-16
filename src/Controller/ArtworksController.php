@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 class ArtworksController extends AbstractController
 {
@@ -27,7 +28,7 @@ class ArtworksController extends AbstractController
     /**
      * @Route("/submit", name="submit")
      */
-    public function add(Request $request): Response
+    public function add(Request $request, SluggerInterface $slugger)
     {
         if($this->getUser() == null){
             return $this->redirectToRoute('app_login');
@@ -64,14 +65,15 @@ class ArtworksController extends AbstractController
                     // instead of its contents
                     $new_post->setImage($newFilename);
 
-                    $new_post = $form->getData();
-
-                    $entityManager = $this->getDoctrine()->getManager();
-                    $entityManager->persist($new_post);
-                    $entityManager->flush();
-
-                    return $this->redirectToRoute('posts');
                 }
+
+                $new_post = $form->getData();
+
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($new_post);
+                $entityManager->flush();
+
+                return $this->redirectToRoute('posts');
             }
 
             return $this->renderForm('artworks/submit.html.twig', [
